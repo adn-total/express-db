@@ -3,8 +3,7 @@ var router = express.Router();
 var mysql = require('mysql')
 
 //connection a la db
-var connection = mysql.createPool({
-    connectionLimit:100,
+var connection = mysql.createConnection({
     host :  'adnlogistique.com',
     user : 'rima1',
     password : 'rima!2017AD',
