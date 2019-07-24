@@ -26,7 +26,7 @@ router.get('/', function(req, res, next) {
 
 /* GET users listing*/
 router.get('/select-client', function(req, res, next) {   
-    //connection.connect();
+    connection.connect();
     connection.query('SELECT * FROM patient', function (error, results, fields){
         if(error) throw error;
         res.send(results) 
